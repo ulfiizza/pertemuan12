@@ -14,9 +14,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$nama', '$alamat', '$jk', '$agama', '$sekolah_asal')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Pendaftaran berhasil!";
+        // Pendaftaran berhasil
+        echo '<script>
+                alert("Pendaftaran Berhasil!");
+                window.location.href = "siswa.php";
+            </script>';
+        exit; // Keluar dari script PHP agar tidak ada output lain yang tampil
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        // Terjadi kesalahan dalam pendaftaran
+        echo '<script>
+                alert("Error: Terjadi masalah dalam pendaftaran.");
+                window.location.href = "form.php";
+            </script>';
+        exit; // Keluar dari script PHP agar tidak ada output lain yang tampil
     }
 }
 

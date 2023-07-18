@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Form Pendaftaran Siswa Baru</title>
+    <title>Form Pendaftaran Siswa</title>
     <!-- Link Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -59,18 +59,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script>
-    // Menangkap submit form dan menampilkan pop-up konfirmasi
-    $("#form_pendaftaran").submit(function (event) {
-        event.preventDefault(); // Menghentikan submit form
-
-        // Tampilkan pop-up konfirmasi
-        if (confirm("Apakah Anda yakin ingin mendaftarkan siswa baru?")) {
-            this.submit(); // Lanjutkan submit form jika dikonfirmasi
-        }
-    });
-</script>
 
 </body>
 </html>
